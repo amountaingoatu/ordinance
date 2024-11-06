@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { provideHooksContext } from "./lib/hooks";
+const runtimeConfig = useRuntimeConfig();
+
+const endpointDomain = runtimeConfig.public.endpointDomain;
+if (!endpointDomain) {
+  throw new Error("Missing endpoint domain in env.");
+}
 
 const colorMode = useColorMode();
 
@@ -32,11 +38,12 @@ useSeoMeta({
 // Provide tanstack-query context
 // Use an absolute endpoint so server-side fetch works too
 provideHooksContext({
-  endpoint: "https://records.amountaingoat.com/api/model",
+  endpoint: `${endpointDomain}/api/model`,
 });
 </script>
 
 <template>
+  <!-- <NuxtPwaManifest /> -->
   <div>
     <NuxtLoadingIndicator />
 

@@ -11,6 +11,7 @@ export type AuthSession = {
 
 export const useAuthSession = async (event: H3Event) => {
     try {
+        // console.log('authSession passing:', event, ' & ', sessionConfig);
         const session = await useSession<AuthSession>(event, sessionConfig);
         return session
     } catch (e) {

@@ -27,4 +27,4 @@ logs
 .history
 
 # zenstack
-libs/hooks
+app/libs/hooks/*
