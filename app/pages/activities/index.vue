@@ -8,6 +8,10 @@ const showEndActivityModal = ref(false);
 const selectedActivity = ref<Activity | undefined>();
 
 const { data: activities, refetch } = useFindManyActivity({
+  orderBy: {
+    createdAt: "desc",
+  },
+  take: 20,
   select: {
     id: true,
     description: true,
