@@ -119,16 +119,6 @@ async function onMutateConfirm(endMostRecent?: "now" | "belated") {
         </UFormGroup> -->
 
         <UFormGroup
-          name="description"
-          label="Description"
-          required
-          class="grid grid-cols-2 gap-2 items-center"
-          :ui="{ container: '' }"
-        >
-          <UTextarea v-model="state.description" autocomplete="off" size="md" />
-        </UFormGroup>
-
-        <UFormGroup
           name="type"
           label="Type"
           required
@@ -161,6 +151,15 @@ async function onMutateConfirm(endMostRecent?: "now" | "belated") {
             option-attribute="label"
             clear-search-on-close
           />
+        </UFormGroup>
+
+        <UFormGroup
+          name="description"
+          label="Note"
+          class="grid grid-cols-2 gap-2 items-center"
+          :ui="{ container: '' }"
+        >
+          <UTextarea v-model="state.description" autocomplete="off" size="md" />
         </UFormGroup>
       </UDashboardSection>
     </UForm>

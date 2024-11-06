@@ -19,24 +19,20 @@ useHead({
   },
 });
 
-const title = "Nuxt UI Pro - Dashboard template";
-const description =
-  "Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.";
+const title = "Records | Ordinance";
+const description = "A tracking and personal surveillance platform.";
 
 useSeoMeta({
   title,
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: "https://dashboard-template.nuxt.dev/social-card.png",
-  twitterImage: "https://dashboard-template.nuxt.dev/social-card.png",
-  twitterCard: "summary_large_image",
 });
 
 // Provide tanstack-query context
 // Use an absolute endpoint so server-side fetch works too
 provideHooksContext({
-  endpoint: "http://localhost:3000/api/model",
+  endpoint: "https://records.amountaingoat.com/api/model",
 });
 </script>
 

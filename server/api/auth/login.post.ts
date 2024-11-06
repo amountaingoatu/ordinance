@@ -23,7 +23,6 @@ export default defineEventHandler(async (event) => {
         name: user.name,
         email: user.email,
     });
-    console.log('session:', session.id, session.data);
     return {
         ...session,
         // token: session.id, //`Bearer: ${session.id}`,
