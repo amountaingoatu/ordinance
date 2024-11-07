@@ -110,8 +110,6 @@ const groups = [
 
     <!-- ~/components/HelpSlideover.vue -->
     <HelpSlideover />
-    <!-- ~/components/NotificationsSlideover.vue -->
-    <NotificationsSlideover />
 
     <ClientOnly>
       <LazyUDashboardSearch :groups="groups" />

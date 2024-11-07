@@ -2,8 +2,6 @@
 import { sub } from "date-fns";
 import type { Period, Range } from "~/types";
 
-const { isNotificationsSlideoverOpen } = useDashboard();
-
 const range = ref<Range>({
   start: sub(new Date(), { days: 14 }),
   end: new Date(),
@@ -14,22 +12,7 @@ const period = ref<Period>("daily");
 <template>
   <UDashboardPage>
     <UDashboardPanel grow>
-      <UDashboardNavbar title="Home">
-        <template #right>
-          <UTooltip text="Notifications" :shortcuts="['N']">
-            <UButton
-              color="gray"
-              variant="ghost"
-              square
-              @click="isNotificationsSlideoverOpen = true"
-            >
-              <UChip color="red" inset>
-                <UIcon name="i-heroicons-bell" class="w-5 h-5" />
-              </UChip>
-            </UButton>
-          </UTooltip>
-        </template>
-      </UDashboardNavbar>
+      <UDashboardNavbar title="Home"> </UDashboardNavbar>
 
       <UDashboardToolbar>
         <template #left>

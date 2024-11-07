@@ -7,16 +7,6 @@ if (!endpointDomain) {
   throw new Error("Missing endpoint domain in env.");
 }
 
-useHead({
-  meta: [
-    {
-      name: "viewport",
-      content:
-        "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
-    },
-  ],
-});
-
 const colorMode = useColorMode();
 
 const color = computed(() =>
